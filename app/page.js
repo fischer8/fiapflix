@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const cardsData = [
   { id: 1, imageUrl: '/shark.jpg' },
@@ -20,7 +21,7 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {cardsData.map((card) => (
           <div key={card.id} className="bg-white rounded-lg shadow-md p-4 relative">
-            <img src={card.imageUrl} alt={`Image ${card.id}`} className="w-full h-auto max-w-[200px]" />
+            <Image src={card.imageUrl} alt={`Image ${card.id}`} className="w-full h-auto max-w-[200px]" />
 
             <button
               className="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded absolute inset-x-0 bottom-0 h-16"
