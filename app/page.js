@@ -6,15 +6,15 @@ const Home = () => {
   const [films, setFilms] = useState(cardsData);
 
   useEffect(() => {
-    let cards = JSON.parse(localStorage.getItem("cards")) || cardsData;
-    setFilms(cards);
+    const cards = JSON.parse(localStorage.getItem("cards")) || cardsData;
+    setFilms([...cards]);
   }, [])
 
-  const handleFavorites = (id, isFav) => {
+  const handleFavorites = (id, bool) => {
     const cards = JSON.parse(localStorage.getItem("cards")) || cardsData;
-    cards[id].fav = isFav;
+    cards[id].fav = bool;
     localStorage.setItem("cards", JSON.stringify(cards));
-    setFilms(cards)
+    setFilms([...cards]);
   }
 
   return (
@@ -30,4 +30,3 @@ const Home = () => {
 };
 
 export default Home;
-
