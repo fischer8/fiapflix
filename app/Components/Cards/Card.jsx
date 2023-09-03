@@ -9,14 +9,14 @@ export default function Card({ card, handleFav }) {
       {card.fav ?
         <BookmarkIcon
           onClick={() => handleFav(card.id, false)}
-          className="absolute right-3 top-2" 
+          className="absolute right-3 top-2 cursor-pointer" 
           fill='red'
           width={50}
         />
         :
         <BookMarkOutline
           onClick={() => handleFav(card.id, true)}
-          className="absolute right-3 top-2 hover:text-pink-600"
+          className="absolute right-3 top-2 hover:text-pink-600 cursor-pointer"
           fill='grey'
           width={50}
         />
