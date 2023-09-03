@@ -6,8 +6,8 @@ import { BookmarkIcon as BookMarkOutline } from '@heroicons/react/24/outline'
 export default function Card(props) {
   const { card, handleFav } = props;
   return (
-    <section id={card.id}>
-      <div className="bg-white rounded-lg shadow-md p-4 relative">
+    <section className="relative" id={card.id}>
+      <div className="bg-white rounded-lg shadow-md p-4">
         {card.fav ?
           <BookmarkIcon onClick={() => handleFav.del(card.id)} className="absolute right-3 top-2 hover:text-pink-100" fill='red' width={50} />
           :
