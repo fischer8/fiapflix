@@ -3,8 +3,7 @@ import Image from 'next/image';
 import { BookmarkIcon } from '@heroicons/react/24/solid'
 import { BookmarkIcon as BookMarkOutline } from '@heroicons/react/24/outline'
 
-export default function Card(props) {
-  const { card, handleFav } = props;
+export default function Card({ card, handleFav }) {
   return (
     <section className="bg-white rounded-lg shadow-md p-4 relative" id={card.id}>
       {card.fav ?
