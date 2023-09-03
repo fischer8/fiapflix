@@ -9,7 +9,7 @@ export default function Card({ card, handleFav }) {
       {card.fav ?
         <BookmarkIcon
           onClick={() => handleFav(card.id, false)}
-          className="absolute right-3 top-2 cursor-pointer" 
+          className="absolute right-3 top-2 cursor-pointer"
           fill='red'
           width={50}
         />
@@ -28,7 +28,7 @@ export default function Card({ card, handleFav }) {
         width={200}
         className="w-full h-auto max-w-[200px]"
       />
-      <button className="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded absolute inset-x-0 bottom-0 h-16">
+      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded absolute inset-x-0 bottom-0 h-16">
         Assistir
       </button>
     </section>
