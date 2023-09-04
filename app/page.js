@@ -23,7 +23,7 @@ const Home = () => {
         FiapFlix
       </h1>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {films.map((film, i) => <Card key={`card-${i}`} card={film} handleFav={handleFavorites} />)}
+        {films.map((f, i) => <Card key={`card-${i}`} film={f} handleFav={handleFavorites} />)}
       </section>
     </section>
   );

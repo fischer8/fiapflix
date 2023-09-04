@@ -3,27 +3,27 @@ import Image from 'next/image';
 import { BookmarkIcon } from '@heroicons/react/24/solid'
 import { BookmarkIcon as BookMarkOutline } from '@heroicons/react/24/outline'
 
-export default function Card({ card, handleFav }) {
+export default function Card({ film, handleFav }) {
   return (
-    <section className="bg-white rounded-lg shadow-md p-4 relative" id={card.id}>
-      {card.fav ?
+    <section className="bg-white rounded-lg shadow-md p-4 relative" id={film.id}>
+      {film.fav ?
         <BookmarkIcon
-          onClick={() => handleFav(card.id, false)}
+          onClick={() => handleFav(film.id, false)}
           className="absolute right-3 top-2 cursor-pointer"
           fill='red'
           width={50}
         />
         :
         <BookMarkOutline
-          onClick={() => handleFav(card.id, true)}
+          onClick={() => handleFav(film.id, true)}
           className="absolute right-3 top-2 hover:text-pink-600 cursor-pointer"
           fill='grey'
           width={50}
         />
       }
       <Image
-        src={card.img}
-        alt={`Image ${card.id}`}
+        src={film.img}
+        alt={`Image ${film.id}`}
         height={200}
         width={200}
         className="w-full h-auto max-w-[200px]"
