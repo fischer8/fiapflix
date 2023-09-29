@@ -33,7 +33,7 @@ const Home = () => {
         FiapFlix
       </h1>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {films.map((f, i) => <Card key={`card-${i}`} film={f} handleFav={handleFavorites} />)}
+        {films.length === 0 ? 'Carregando...' : films.map((f, i) => <Card key={`card-${i}`} film={f} handleFav={handleFavorites} />)}
       </section>
     </section>
   );
