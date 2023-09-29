@@ -28,7 +28,7 @@ const Home = () => {
   }
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-gray-800">
+    <section className="min-h-screen text-white flex flex-col justify-center items-center bg-gray-800">
       <h1 className="text-center mb-8 text-6xl min-h-fit p-5">
         FiapFlix
       </h1>
