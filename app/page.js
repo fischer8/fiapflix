@@ -3,7 +3,7 @@ import { useEffect, useState, React } from 'react'
 import { cardsData, Card } from '@/components';
 
 const Home = () => {
-  const [films, setFilms] = useState(cardsData);
+  const [films, setFilms] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
