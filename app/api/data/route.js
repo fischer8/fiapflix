@@ -1,4 +1,4 @@
-import { cardsData } from "@/app/Components";
+import { cardsData } from "@/components";
 import { NextResponse } from "next/server";
 
 export async function GET() {
