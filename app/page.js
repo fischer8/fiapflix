@@ -6,8 +6,18 @@ const Home = () => {
   const [films, setFilms] = useState(cardsData);
 
   useEffect(() => {
-    const cards = JSON.parse(localStorage.getItem("cards")) || cardsData;
-    setFilms([...cards]);
+    const getData = async () => {
+      const cards = JSON.parse(localStorage.getItem("cards")) || null;
+      if (!cards) {
+        const res = await fetch("/api/data")
+          .then((res) => res.json())
+          .then(({ info }) => info);
+        localStorage.setItem("cards", JSON.stringify(res));
+        return setFilms(res);
+      }
+      return setFilms([...cards])
+    }
+    getData();
   }, [])
 
   const handleFavorites = (id, bool) => {
