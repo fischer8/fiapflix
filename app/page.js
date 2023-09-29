@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState, React } from 'react'
-import { Card, cardsData } from './Components';
+import { cardsData, Card } from '@/components';
 
 const Home = () => {
   const [films, setFilms] = useState(cardsData);
