@@ -21,8 +21,7 @@ export default function Login(){
 
     return (
         <div className="flex h-screen">
-            <main className="container m-auto max-w-md p-6">
-                <h1 className="text-xl font-bold">Fiap Filmes</h1>
+            <main className="container m-auto max-w-md p-8">
                 <form onSubmit={login} className="flex flex-col">
                     <label htmlFor="email">E-mail</label>
                     <input 
