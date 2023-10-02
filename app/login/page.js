@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { toast } from "react-hot-toast";
 import { serverLogin } from "@/components/auth/auth";
 
 export default function Login(){
